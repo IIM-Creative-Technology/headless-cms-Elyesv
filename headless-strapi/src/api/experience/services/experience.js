@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * technology service
+ * experience service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::technology.technology');
+module.exports = createCoreService('api::experience.experience');

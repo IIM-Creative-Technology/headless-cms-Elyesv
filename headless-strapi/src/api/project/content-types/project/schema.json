@@ -24,15 +24,31 @@
         "images"
       ]
     },
+    "technologies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::technologie.technologie"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Scolaire",
+        "Professionnel",
+        "Personnel"
+      ]
+    },
     "slug": {
       "type": "uid",
       "targetField": "name",
-      "required": false
+      "required": true
     },
-    "technos": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::technology.technology"
+    "description": {
+      "type": "customField",
+      "options": {
+        "output": "Markdown",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

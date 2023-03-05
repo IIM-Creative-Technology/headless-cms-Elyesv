@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "competences",
+  "info": {
+    "singularName": "competence",
+    "pluralName": "competences",
+    "displayName": "Compétence",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::technologie.technologie"
+    }
+  }
+}

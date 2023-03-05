@@ -6,9 +6,10 @@
         </div>
         <div class="container-navbar">
             <ul>
-                <li><NuxtLink to="#">A propos</NuxtLink></li>
-                <li><NuxtLink to="#">Projets</NuxtLink></li>
-                <li><NuxtLink to="#" class="text-orange">Collaborons !</NuxtLink></li>
+                <li><NuxtLink to="#propos">A propos</NuxtLink></li>
+                <li><NuxtLink to="#projets">Projets</NuxtLink></li>
+                <li><NuxtLink to="#competence">Compétence</NuxtLink></li>
+                <li><NuxtLink to="#contact" class="text-orange">Collaborons !</NuxtLink></li>
             </ul>
         </div>
     </nav>
@@ -25,6 +26,10 @@
         display: flex;
         justify-content: space-between;
 
+        @media screen and (max-width: 700px) {
+            justify-content: center;
+        }   
+
         &-logo{
             display: flex;
             align-items: center;
@@ -36,9 +41,9 @@
 
             &-line{
                 height: 72px;
-                border-left: 1px solid #FF9142;
+                border: 1px solid #FF9142;
                 margin-top: 10px;
-                transform: rotate(45deg);
+                transform: rotate(27.5deg);
             }
         }
 
@@ -47,6 +52,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
 
             & > ul{
                 list-style: none;
